@@ -1,0 +1,22 @@
+plugins {
+    id'application'
+    id'com.github.johnrengelman.shadow' version '4.0.4'
+}
+
+mainClassName = 'shabby.bot.Latte'
+version '1.0'
+
+def jdaVersion = '4.0.0_48'
+
+sourceCompatibility = targetCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile "net.dv8tion:JDA:$jdaVersion"
+    compile group: 'com.h2database', name: 'h2', version: '1.4.199'
+}
+
+compileJava.options.encoding = 'UTF-8'
